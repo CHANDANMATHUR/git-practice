@@ -1,0 +1,38 @@
+
+import java.util.Scanner;
+
+public class Check_Number_is_Prime
+{
+	public static void main(String[] args) 
+	{
+
+		Scanner scn = new Scanner(System.in);  //or int num = 17;
+		 System.out.println("Enter the Number");
+		 int num = scn.nextInt();
+		
+		 int count = 0; // count is taken to count number of factors
+// "count" is taken OUTSIDE the for loop because if we take "count" INSIDE for loop then every time when for loop will iterate it will be re-initialized with zero(0) again and again 
+		
+		 for (int i = 1; i <= num; i++)
+		 {
+			 if(num % i == 0)
+			 {
+				 count++;
+//				 System.out.println("Count " +count);
+			 }
+			 
+		}
+		 
+		 if(count ==2)
+		 {
+			 System.out.println(num+" is a Prime Number");
+		 }
+		 else
+		 {
+			 System.err.println(num +" is not a Prime Number");
+		 }
+		
+		 scn.close();
+	}
+
+}
